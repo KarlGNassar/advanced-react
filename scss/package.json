@@ -17,14 +17,15 @@
   },
   "scripts": {
     "lint": "stylelint ./**/*.scss",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "npm lint --fix",
+    "lint-staged": "lint-staged"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm lint-staged"
     }
   },
   "lint-staged": {
-    "*.scss": "yarn lint:fix"
+    "*.scss": "npm lint:fix"
   }
 }
