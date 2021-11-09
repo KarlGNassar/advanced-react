@@ -1,7 +1,7 @@
-import { jsx } from 'react/jsx-runtime';
+import React from 'react';
 
 const Button = ({ label }) => {
-    return jsx("button", { children: label }, void 0);
+    return React.createElement("button", { className: "dse-button--container" }, label);
 };
 
 export { Button as default };

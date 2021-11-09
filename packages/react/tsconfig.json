@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
+    "outDir": "lib",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "target": "ESNext",
     "noImplicitAny": true,
