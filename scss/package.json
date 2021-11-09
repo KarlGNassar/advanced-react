@@ -18,16 +18,16 @@
   },
   "scripts": {
     "lint": "stylelint ./**/*.scss",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "yarn lint --fix",
     "lint-staged": "lint-staged",
     "build": "node src/scripts/build.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-staged"
+      "pre-commit": "yarn lint-staged"
     }
   },
   "lint-staged": {
-    "*.scss": "npm run lint:fix"
+    "*.scss": "yarn lint:fix"
   }
 }
