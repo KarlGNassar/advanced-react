@@ -29566,7 +29566,109 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@advanced-react/react/lib/foundation/Spacing.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@advanced-react/foundation/lib/FontSize.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const fontSizes = {
+  xs: "xs",
+  sm: "sm",
+  base: "base",
+  lg: "lg",
+  xl: "xl"
+};
+
+var _default = Object.freeze(fontSizes);
+
+exports.default = _default;
+},{}],"../../../node_modules/@advanced-react/foundation/lib/Spacing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const spaces = {
+  xxxs: "xxxs",
+  // 4px
+  xxs: "xxs",
+  // 8px
+  xs: "xs",
+  // 12px
+  sm: "sm",
+  // 16px
+  md: "md",
+  // 24px
+  lg: "lg",
+  // 32px
+  xl: "xl",
+  // 48px
+  xxl: "xxl",
+  // 72px
+  xxxl: "xxxl" // 96px
+
+};
+
+var _default = Object.freeze(spaces);
+
+exports.default = _default;
+},{}],"../../../node_modules/@advanced-react/foundation/lib/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "FontSize", {
+  enumerable: true,
+  get: function () {
+    return _FontSize.default;
+  }
+});
+Object.defineProperty(exports, "Spacing", {
+  enumerable: true,
+  get: function () {
+    return _Spacing.default;
+  }
+});
+
+var _FontSize = _interopRequireDefault(require("./FontSize"));
+
+var _Spacing = _interopRequireDefault(require("./Spacing"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./FontSize":"../../../node_modules/@advanced-react/foundation/lib/FontSize.js","./Spacing":"../../../node_modules/@advanced-react/foundation/lib/Spacing.js"}],"../../../node_modules/@advanced-react/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _foundation = require("@advanced-react/foundation");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Color = ({
+  hexCode,
+  width = _foundation.Spacing.sm,
+  height = _foundation.Spacing.sm
+}) => {
+  const className = `dse-width-${width} dse-height-${height}`;
+  return _react.default.createElement("div", {
+    className: className,
+    style: {
+      backgroundColor: hexCode
+    }
+  });
+};
+
+exports.default = Color;
+},{"react":"../../../node_modules/react/index.js","@advanced-react/foundation":"../../../node_modules/@advanced-react/foundation/lib/index.js"}],"../../../node_modules/@advanced-react/react/lib/foundation/Spacing.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29595,36 +29697,7 @@ const spaces = {
 };
 var Spacing = Object.freeze(spaces);
 exports.default = Spacing;
-},{}],"../../../node_modules/@advanced-react/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Spacing = _interopRequireDefault(require("../../foundation/Spacing.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Color = ({
-  hexCode,
-  width = _Spacing.default.sm,
-  height = _Spacing.default.sm
-}) => {
-  const className = `dse-width-${width} dse-height-${height}`;
-  return _react.default.createElement("div", {
-    className: className,
-    style: {
-      backgroundColor: hexCode
-    }
-  });
-};
-
-exports.default = Color;
-},{"react":"../../../node_modules/react/index.js","../../foundation/Spacing.js":"../../../node_modules/@advanced-react/react/lib/foundation/Spacing.js"}],"../../../node_modules/@advanced-react/react/lib/index.js":[function(require,module,exports) {
+},{}],"../../../node_modules/@advanced-react/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
