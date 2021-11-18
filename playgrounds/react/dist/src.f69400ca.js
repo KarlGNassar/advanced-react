@@ -29668,36 +29668,32 @@ const Color = ({
 };
 
 exports.default = Color;
-},{"react":"../../../node_modules/react/index.js","@advanced-react/foundation":"../../../node_modules/@advanced-react/foundation/lib/index.js"}],"../../../node_modules/@advanced-react/react/lib/foundation/Spacing.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","@advanced-react/foundation":"../../../node_modules/@advanced-react/foundation/lib/index.js"}],"../../../node_modules/@advanced-react/react/lib/atoms/Text/Text.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-const spaces = {
-  xxxs: "xxxs",
-  // 4px
-  xxs: "xxs",
-  // 8px
-  xs: "xs",
-  // 12px
-  sm: "sm",
-  // 16px
-  md: "md",
-  // 24px
-  lg: "lg",
-  // 32px
-  xl: "xl",
-  // 48px
-  xxl: "xxl",
-  // 72px
-  xxxl: "xxxl" // 96px
 
+var _react = _interopRequireDefault(require("react"));
+
+var _foundation = require("@advanced-react/foundation/");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Text = ({
+  size = _foundation.FontSize.base,
+  children
+}) => {
+  const className = `des-text-${size}`;
+  return _react.default.createElement("p", {
+    className: className
+  }, children);
 };
-var Spacing = Object.freeze(spaces);
-exports.default = Spacing;
-},{}],"../../../node_modules/@advanced-react/react/lib/index.js":[function(require,module,exports) {
+
+exports.default = Text;
+},{"react":"../../../node_modules/react/index.js","@advanced-react/foundation/":"../../../node_modules/@advanced-react/foundation/lib/index.js"}],"../../../node_modules/@advanced-react/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29709,19 +29705,19 @@ Object.defineProperty(exports, "Color", {
     return _Color.default;
   }
 });
-Object.defineProperty(exports, "Spacing", {
+Object.defineProperty(exports, "Text", {
   enumerable: true,
   get: function () {
-    return _Spacing.default;
+    return _Text.default;
   }
 });
 
 var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 
-var _Spacing = _interopRequireDefault(require("./foundation/Spacing.js"));
+var _Text = _interopRequireDefault(require("./atoms/Text/Text.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Color/Color.js":"../../../node_modules/@advanced-react/react/lib/atoms/Color/Color.js","./foundation/Spacing.js":"../../../node_modules/@advanced-react/react/lib/foundation/Spacing.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"../../../node_modules/@advanced-react/react/lib/atoms/Color/Color.js","./atoms/Text/Text.js":"../../../node_modules/@advanced-react/react/lib/atoms/Text/Text.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -29848,7 +29844,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61595" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64456" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
